@@ -1,0 +1,74 @@
+﻿@model Entities.Contact
+
+@{
+    ViewData["Title"] = "İletişim";
+}
+
+<h1>İletişim</h1>
+
+<h4>Bizimle İletişime Geçmek İçin Formu Doldurabilirsiniz</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Contacts">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Surname" class="control-label"></label>
+                <input asp-for="Surname" class="form-control" />
+                <span asp-validation-for="Surname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Phone" class="control-label"></label>
+                <input asp-for="Phone" class="form-control" />
+                <span asp-validation-for="Phone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Message" class="control-label"></label>
+                <textarea asp-for="Message" class="form-control"></textarea>
+                <span asp-validation-for="Message" class="text-danger"></span>
+            </div>
+            <div class="form-group my-3">
+                <input type="submit" value="Gönder" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+    <div class="col-md-4">
+        <h5>Adresimiz</h5>
+        <address>
+            Doğu Mah. Gazi Paşa Cad. Ihlamur Sok. <br />
+            Has İş Merkezi No:28 Kat :4
+        </address>
+        <h5>Telefon</h5>
+        <p>
+            0216 491 4274
+        </p>
+        <h5>E Mail</h5>
+        <p>
+            <a href="mailto:info@aribilgi.com">info@aribilgi.com</a>
+        </p>
+        
+    </div>
+    <div class="col-md-4">
+        <h5>
+            Konumumuz
+        </h5>
+        <div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3016.6647909984836!2d29.233057000000002!3d40.87923!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa053e0b7ec57d6!2sAr%C4%B1%20Bilgi%20Bili%C5%9Fim%20Teknolojileri%20Akademisi!5e0!3m2!1str!2sus!4v1651768108787!5m2!1str!2sus" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+</div>
+@Html.Raw(TempData["Mesaj"])
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

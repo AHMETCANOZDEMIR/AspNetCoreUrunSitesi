@@ -1,0 +1,21 @@
+﻿Projeyi gerçek bir hostingde yayınlamak için yapmamız gerekenler.
+
+* Projemizin ön yüzüne yani AspNetCoreUrunSitesi projesine sağ tıklayıp Publish menüsüne tıklıyoruz.
+* Açılan pencerede proje yayınlama için gerekli yapılandırma ayarlarının yapılması gerekiyor!
+* Gelen ekranda projeyi hangi platforma yayınlayacağımızı soruyor.
+* Burada seçeeneklerden Folder ı seçiyoruz, böylece bilgisayarımızdaki bir klasöre çıktıyı alıp istediğimiz yere yükleyebiliriz.
+* Folder ı seçtikten sonra Next diyerek sonraki adıma geçiyoruz.
+* Bu ekranda hangi lokasyondaki klasöre yükleyeceğimizi ayarlıyoruz. Varsayılan yeri değiştirebiliriz.
+* Bu noktada masaüstünde veya D dizininde Publish isminde bir klasör açıp içerisine proje adıyla uygulamayı yayınlayabiliriz.
+* Bu ekranda Browse butonuna basıp açılan pencereden projeyi yayınlamak istediğimiz klasörü seçiyoruz. Finish e basıyoruz.
+* Açılan pencerede sağ üst köşedeki Publish butonuna basarak yayınlama işlemini başlatıyoruz.
+* Dikkat! Projeyi gerçek bir hostinge yükleyeceksek Publish etmeden önce veritabanı ayarlarını localdb den gerçek sunucudaki
+veritabanı bilgileriyle değiştirmemiz gerekir yoksa canlıdaki site çalışmaz hata verir!
+* Proje yayınlama işlemi tamamlandıktan sonra publish edilen dosyaları FileZilla gibi bir programla sunucumuza bağlanıp yüklememiz gerekiyor.
+* File zilla programına hosting firmasından aldığımız kullanıcı adı, şifre ve sitemizin adresini belirtilen kutucuklara girip 
+bağlan butonuna basarak suncumuza bağlanabiliriz.
+* File zilla programı üzerinden sol pencerede bizim bilgisayarımızdaki dosyaları, sağ pencerede ise sunucudaki dosyaları yönetebiliriz.
+* Sol penceredeki publish ettiğimiz dosyaların tümünü seçip mouse ile sağdaki sunucuya sürükleyip bırakmamız yeterli.
+* Bu noktada sunucuda eski dosyalar bulunuyorsa bir pencere açılır ve bize ne yapmak istediğimiz sorulur.
+* Sunucudaki dosyaların üzerine yaz deyip ilerlersek yeni güncel dosyalar sunucuya yüklenir.
+

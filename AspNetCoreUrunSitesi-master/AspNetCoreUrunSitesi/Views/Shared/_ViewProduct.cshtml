@@ -1,0 +1,14 @@
+﻿@model Product
+
+<div class="col">
+    <a asp-controller="Products" asp-action="Detail" asp-route-id="@Model.Id">
+        <div class="card shadow-sm">
+            <img src="/Img/@Model.Image" alt="@Model.Name" title="@Model.Name" class="bd-placeholder-img card-img-top" />
+            <div class="card-body">
+                <p class="card-text">
+                    @Model.Name
+                </p>
+            </div>
+        </div>
+    </a>
+</div>

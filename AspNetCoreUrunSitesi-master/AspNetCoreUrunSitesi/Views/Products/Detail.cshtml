@@ -1,0 +1,27 @@
+﻿@model Entities.Product
+
+@{
+    ViewData["Title"] = Model.Name + " Detay";
+}
+
+<h1>@Model.Name</h1>
+
+<div class="row">
+    <hr />
+    <div class="col-md-5">
+        <div class="card shadow-sm">
+            <img src="/Img/@Model.Image" alt="@Model.Name" title="@Model.Name" class="bd-placeholder-img card-img-top" />
+        </div>
+    </div>
+    <div class="col-md-7">
+        <p>
+            Ürün Fiyatı :  @Model.Price
+        </p>
+        <p>
+            Kalan Stok :  @Model.Stock
+        </p>
+        <p>
+            @Model.Content
+        </p>
+    </div>
+</div>

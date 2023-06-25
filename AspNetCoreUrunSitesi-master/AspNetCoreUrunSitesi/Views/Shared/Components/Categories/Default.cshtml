@@ -1,0 +1,21 @@
+﻿@model IEnumerable<Entities.Category>
+
+@foreach (var item in Model.Where(c => c.ParentId == 0))
+{
+    <div class="dropdown">
+        <a class="dropdown-toggle nav-link px-2 link-dark" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            @item.Name
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            @foreach (var altKategori in Model.Where(c => c.ParentId == item.Id))
+            {
+                <li>
+                    <a asp-controller="Products" asp-action="Index" asp-route-id="@altKategori.Id" class="dropdown-item">@altKategori.Name</a>
+                </li>
+            }
+        </ul>
+    </div>
+}
+
+
+
